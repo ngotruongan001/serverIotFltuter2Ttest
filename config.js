@@ -4,14 +4,15 @@ const assert = require('assert');
 
 dotenv.config();
 
-// const {
-//     PORT,
-//     HOST,
-//     HOST_URL,
-// } = process.env;
+const {
+    HOST,
+    HOST_URL,
+} = process.env;
 
-// assert(PORT, 'PORT is required');
-// assert(HOST, 'HOST is required');
+const PORT = Process.env.PORT || 3000 ;
+
+assert(PORT, 'PORT is required');
+assert(HOST, 'HOST is required');
 
 // API_KEY="AIzaSyCFkvTx55DvTZP01VjmlbkhQPUEb86XJTA"
 // AUTH_DOMAIN= "realtime-flutter-1b867.firebaseapp.com"
