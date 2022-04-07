@@ -23,9 +23,9 @@ assert(HOST, 'HOST is required');
 // APP_ID= "1:794380958759:web:1111de432305e1ae9ae202"
 
 module.exports = {
-    port: 8080,
-    host: "localhost",
-    url: "http://localhost:8080",
+    port: PORT,
+    host: HOST,
+    url: HOST_URL,
     firebaseConfig: {
         apiKey: "AIzaSyDO92qWJUY0DN1_4pVU3Ws6bVRD3ovMiQY",
         authDomain: "esp32-realtime-813e1.firebaseapp.com",
