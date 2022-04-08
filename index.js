@@ -7,7 +7,7 @@ const firebase = require('./db');
 
 const FCM = require('fcm-node')
 var serverKey = require('./privateKey.json')
-
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(express.json());
@@ -38,7 +38,6 @@ const sendMessage = (token, title, body) => {
         if (err) {
             console.log("Something has gone wrong!")
         } else {
-
             console.log("Successfully sent with response: ", response)
             const add_notification = new Notification({ 
                 token: req.body.token,
@@ -74,4 +73,4 @@ app.get('/',(req, res) => {
 })
 
 
-app.listen(config.port, () => console.log('App is listening on url http://localhost:' + config.port));
+app.listen((process.env.PORT || 3000), () => console.log('App is listening on url http://localhost:' + PORT));
